@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Ridge-Racer';
+    src: url('../fonts/sofachrome\ rg.otf');
+
+}
+
+@font-face {
+    font-family: 'A4SPEED';
+    src: url('../fonts/A4SPEED-Bold.ttf');
+}
+
+html {
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=10190"), auto;
+}
+
+body::before{
+    content: "";
+    background-image: url(../img/rr-background10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0);
+}
+
+.logo {
+    width: 30%;
+    margin: 30px 0px;
+}
+
+
+
+.selecao-de-jogos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    min-height: calc(100vh - 152px);
+    justify-content: center;
+}
+
+.selecao-de-jogos .lista-de-jogos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.selecao-de-jogos .jogos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 585px;
+    gap: 25px;
+}
+
+.selecao-de-jogos .jogos .titulo {
+    font-family: 'Ridge-Racer';
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffffff;
+    width: 100%;
+    text-align: center;
+}
+
+.lista-de-jogos {
+    list-style: none;
+}
+
+
+.lista-de-jogos .jogo img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.lista-de-jogos .jogo.selecionado {
+    box-shadow: 0px 0px 24px 5px rgb(0, 0, 0);
+    scale: 1.1;
+    transition: 0.3s;
+}
+
+.jogo-selecionado {
+    text-align: center;
+    max-height: 530px;
+}
+
+.jogo-selecionado .jogo-video {
+    width: 600px;
+    height: 400px;
+}
+
+.jogo-selecionado .nome-jogo {
+    font-family: 'A4SPEED', sans-serif;
+    color: white;
+    border-bottom: 2px solid #000000;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.jogo-selecionado .descricao-jogo {
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+}
